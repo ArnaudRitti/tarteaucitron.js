@@ -394,6 +394,12 @@ a.tarteaucitronSelfLink {
 #tarteaucitron #tarteaucitronServices .tarteaucitronLine:hover {
   background: rgba(51, 51, 51, 0.2);
 }
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsAllowed {
+  border-color: #1B870B;
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsDenied {
+  border-color: #9C1A1A;
+}
 #tarteaucitron #tarteaucitronServices .tarteaucitronMainLine {
   background: #333;
   border: 3px solid #333;
@@ -458,6 +464,20 @@ a.tarteaucitronSelfLink {
   border: 0;
 }
 
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllAllowed.tarteaucitronIsSelected {
+  background-color: #1B870B;
+  opacity: 1;
+}
+#tarteaucitron #tarteaucitronServices #tarteaucitronAllDenied.tarteaucitronIsSelected {
+  background-color: #9C1A1A;
+  opacity: 1;
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsAllowed .tarteaucitronAllow {
+  background-color: #1B870B;
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsDenied .tarteaucitronDeny {
+  background-color: #9C1A1A;
+}
 #tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronName .tarteaucitronListCookies {
   color: #333;
   font-size: 12px;
@@ -723,13 +743,13 @@ div.amazon_product {
   opacity: 1 !important;
 }
 
-.tarteaucitronLine .tarteaucitronAllow {
+.tarteaucitronLine .tarteaucitronAllow, .tarteaucitronLine .tarteaucitronDeny {
   opacity: 0.4;
 }
 
 div#tarteaucitronInfo {
   display: block !important;
-  position: relative;
+  position: relative !important;
   text-align: center !important;
   max-width: 80% !important;
   padding: 15px 0 !important;

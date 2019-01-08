@@ -423,6 +423,12 @@ a.tarteaucitronSelfLink {
             margin: 0;
             overflow: hidden;
             padding: 15px 5px;
+            &.tarteaucitronIsAllowed {
+                border-color: #1B870B;
+            }
+            &.tarteaucitronIsDenied {
+                border-color: #9C1A1A;
+            }
         }
         .tarteaucitronMainLine {
             background: #333;
@@ -493,9 +499,27 @@ a.tarteaucitronSelfLink {
 }
 
 #tarteaucitron {
-    #tarteaucitronServices .tarteaucitronLine .tarteaucitronName .tarteaucitronListCookies {
-        color: #333;
-        font-size: 12px;
+    #tarteaucitronServices {
+        #tarteaucitronAllAllowed.tarteaucitronIsSelected {
+            background-color: #1B870B;
+            opacity: 1;
+        }
+        #tarteaucitronAllDenied.tarteaucitronIsSelected {
+            background-color: #9C1A1A;
+            opacity: 1;
+        }
+        .tarteaucitronLine {
+            &.tarteaucitronIsAllowed .tarteaucitronAllow {
+                background-color: #1B870B;
+            }
+            &.tarteaucitronIsDenied .tarteaucitronDeny {
+                background-color: #9C1A1A;
+            }
+            .tarteaucitronName .tarteaucitronListCookies {
+                color: #333;
+                font-size: 12px;
+            }
+        }
     }
     .tarteaucitronH3 {
         font-size: 18px;
@@ -769,13 +793,15 @@ div.amazon_product {
     opacity: 1 !important;
 }
 
-.tarteaucitronLine .tarteaucitronAllow {
-    opacity: 0.4;
+.tarteaucitronLine {
+    .tarteaucitronAllow, .tarteaucitronDeny {
+        opacity: 0.4;
+    }
 }
 
 div#tarteaucitronInfo {
     display: block !important;
-    position: relative;
+    position: relative !important;
     text-align: center !important;
     max-width: 80% !important;
     padding: 15px 0 !important;
